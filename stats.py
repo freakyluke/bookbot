@@ -5,7 +5,6 @@ def word_count(txt):
 def char_count(txt):
     letters = txt.lower()
     counted ={}
-    num=0
     for letter in letters:
         if letter in counted:
             counted[letter] +=1
@@ -16,12 +15,12 @@ def sort_count(dick):
     def sort_on(items):
         return items["num"]
 
-    temp =[]
+    templist =[]
     tmp2=[]
     for dic in dick:
         if dic.isalpha():
-            temp.append({"char" : dic,"num":dick[dic]})
-    temp.sort(reverse=True,key=sort_on)
+            templist.append({"char" : dic,"num":dick[dic]})
+    templist.sort(reverse=True,key=sort_on)
 
    
-    return temp
+    return templist
